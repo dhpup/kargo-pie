@@ -6,7 +6,7 @@ metadata:
 spec:
   generators:
   - git:
-      repoURL: https://github.com/akuity/kargo-advanced.git
+      repoURL: https://github.com/dhpup/kargo-pie.git
       revision: HEAD
       directories:
       - path: env/*
@@ -14,15 +14,15 @@ spec:
     metadata:
       name: guestbook-{{path.basename}}
       annotations:
-        kargo.akuity.io/authorized-stage: kargo-advanced:{{path.basename}}
+        kargo.akuity.io/authorized-stage: kargo-pie:{{path.basename}}
     spec:
       destination:
         namespace: guestbook-{{path.basename}}
         # Specify either a cluster destination name or server address:
         # name: REPLACEME
         # server: https://REPLACEME
-      project: guestbook
+      project: kargo-pie
       source:
         path: ./
-        repoURL: https://github.com/akuity/kargo-advanced.git
+        repoURL: https://github.com/dhpup/kargo-pie.git
         targetRevision: env/{{path.basename}}

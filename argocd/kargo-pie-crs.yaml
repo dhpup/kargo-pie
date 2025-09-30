@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kargo-pie
+spec:
+  project: kargo-pie
+  source:
+    repoURL: https://github.com/dhpup/kargo-helm-ff.git
+    path: kargo
+  destination:
+    name: kargo1
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true

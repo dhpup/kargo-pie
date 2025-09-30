@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kargo-pie-aoa
+spec:
+  project: kargo-pie
+  syncPolicy:
+    automated: {}
+  source:
+    repoURL: https://github.com/dhpup/kargo-pie
+    path: argocd
+    directory:
+      recurse: true
+  destination:
+    name: in-cluster
+    namespace: argocd
