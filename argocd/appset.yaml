@@ -17,9 +17,9 @@ spec:
         kargo.akuity.io/authorized-stage: kargo-pie:{{path.basename}}
     spec:
       destination:
-        namespace: guestbook-{{path.basename}}
+        # namespace: guestbook-{{path.basename}}
         # Specify either a cluster destination name or server address:
-        # name: REPLACEME
+        name: mac2
         # server: https://REPLACEME
       project: kargo-pie
       source:
