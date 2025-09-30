@@ -5,7 +5,7 @@ metadata:
 spec:
   project: kargo-pie
   source:
-    repoURL: https://github.com/dhpup/kargo-helm-ff.git
+    repoURL: https://github.com/dhpup/kargo-pie.git
     path: kargo
   destination:
     name: kargo1
